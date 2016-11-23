@@ -1,3 +1,3 @@
 # getImage-Angular
 
-To shaow all the images from JSON data
+Get all the images form JSON data and show in table.
