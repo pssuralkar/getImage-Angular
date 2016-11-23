@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html >
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get images from JSON files</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 <body>
-  <div ng-app="myApp" ng-controller="customersCtrl">
-  <table>
-    <tr ng-repeat="x in names">
-      <td><img src="{{ x.thumbnail_img_url }}"/></td>
-    </tr>
-  </table>
-</div>
+<div class="container">
+  <div class="row" ng-app="myApp" ng-controller="customersCtrl">
+    <div class="col-sm-2" ng-repeat="x in names">
+      <div class="panel panel-primary">
+        <div class="panel-heading">{{ x.id }}</div>
+        <div class="panel-body"><img src="{{ x.thumbnail_img_url }}" alt="{{x.caption }}" /></div>
+        <div class="panel-footer">Image footer text</div>
+      </div>
+    </div> 
+  </div>
+</div> 
 <script src = "js/script.js"></script>
 </body>
 </html>
-
